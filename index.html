@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Análise Assintótica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/mathjs@6.1.0/dist/math.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <form id="form" >
+        <div class="form-row align-items-center">
+          <div class="col-2">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">N</div>
+              </div>
+              <input type="number" min="1" class="form-control" id="N" value="10" required>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">f(n)</div>
+              </div>
+              <input type="text" class="form-control" id="eqF" value="3*(n^2) - 30" required>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">g(n)</div>
+              </div>
+              <input type="text" class="form-control" id="eqG" value="n^2" >
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">C<sub>1</sub></div>
+              </div>
+              <input type="number" class="form-control" id="c1" value="1">
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">C<sub>2</sub></div>
+              </div>
+              <input type="number" class="form-control" id="c2" value="5">
+            </div>
+          </div>
+
+        </div>
+        <br/>
+        <input class="btn btn-primary btn-block" type="submit" value="Atualizar" />
+      </form>
+    </div>
+  </div>
+
+  <div class="row"></div>
+  <div class="col-12">
+    <div id="plot"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
